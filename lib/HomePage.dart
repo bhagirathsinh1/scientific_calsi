@@ -15,7 +15,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   var userQuestion = '';
   var userAnswer = '';
-  var viewHistory = 'View history nowdays';
+  var viewHistory = 'View history ';
   var ob = 0;
   var cb = 0;
   var zero = 0;
