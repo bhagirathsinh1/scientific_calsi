@@ -33,6 +33,9 @@ jobs:
       #     cd ..
       #     zip -r app.ipa Payload
       - name: Push to Releases
+            - tag: calsi
+
+        
         uses: ncipollo/release-action@v1
         with:
           artifacts: "build/app/outputs/apk/debug/*"
