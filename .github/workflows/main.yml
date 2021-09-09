@@ -33,11 +33,11 @@ jobs:
       #     cd ..
       #     zip -r app.ipa Payload
       - name: Push to Releases
-             tag: calsi
+             
 
         
         uses: ncipollo/release-action@v1
         with:
           artifacts: "build/app/outputs/apk/debug/*"
-          tag: v1.0.${{ github.run_number }}
+          tag: calsi.${{ github.run_number }}
           token: ${{ secrets.TOKEN }}
