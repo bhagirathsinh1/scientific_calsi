@@ -37,10 +37,10 @@ jobs:
   #         name: apk
   #          path: app/outputs/apk/debug/app-debug.apk
   release:
-   name: apk
-            path: app/outputs/apk/debug/app-debug.apk
+           
     name: Release APK
      needs: apk
+      path: app/outputs/apk/debug/app-debug.apk
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     steps:
