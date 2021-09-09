@@ -18,9 +18,24 @@ jobs:
         with:
           java-version: 1.8
       - name: Unit tests
-      - run:
+       - restore_cache:
+      key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+  - run:
+     name: TEST1
+     command: find . -name gradle*
+  - run:
      name: Chmod permissions #if permission for Gradlew Dependencies fail, use this. 
      command: sudo chmod +x ./gradlew 
+  - run:
+      name: Download Dependencies
+      command: ./gradlew androidDependencies
+  - save_cache:
+      paths:
+        - ~/.gradle
+      key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+  - run:
+      name: Run Tests
+      command: ./gradlew lint test
         run: bash ./gradlew test --stacktrace
 
   apk:
@@ -34,9 +49,24 @@ jobs:
         with:
           java-version: 1.8
       - name: Build debug APK
-      - run:
+       - restore_cache:
+      key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+  - run:
+     name: TEST1
+     command: find . -name gradle*
+  - run:
      name: Chmod permissions #if permission for Gradlew Dependencies fail, use this. 
      command: sudo chmod +x ./gradlew 
+  - run:
+      name: Download Dependencies
+      command: ./gradlew androidDependencies
+  - save_cache:
+      paths:
+        - ~/.gradle
+      key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+  - run:
+      name: Run Tests
+      command: ./gradlew lint test
         run: bash ./gradlew assembleDebug --stacktrace
       - name: Upload APK
         uses: actions/upload-artifact@v1
