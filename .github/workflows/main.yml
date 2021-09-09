@@ -6,7 +6,7 @@ on:
       - 'v*'
 
 jobs:
-  test:
+  # test:
     name: Run Unit Tests
     runs-on: windows-latest
     steps:
