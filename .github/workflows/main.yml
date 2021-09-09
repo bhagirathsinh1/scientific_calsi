@@ -18,6 +18,10 @@ jobs:
         with:
           java-version: 1.8
       - name: Unit tests
+      - name: Make gradlew executable
+      run: chmod +x ./gradlew
+    - name: Build with Gradle
+      run: ./gradlew build
         run: bash ./gradlew test --stacktrace
 
   apk:
@@ -31,6 +35,10 @@ jobs:
         with:
           java-version: 1.8
       - name: Build debug APK
+      - name: Make gradlew executable
+      run: chmod +x ./gradlew
+    - name: Build with Gradle
+      run: ./gradlew build
         run: bash ./gradlew assembleDebug --stacktrace
       - name: Upload APK
         uses: actions/upload-artifact@v1
