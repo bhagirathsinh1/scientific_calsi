@@ -24,8 +24,8 @@ jobs:
 
     - name: Create release and upload apk
       uses: underwindfall/create-release-with-debugapk@v2.0.0
-      env:
-          TOKEN: ${{ secrets.TOKEN }}
+      
+          token: ${{ secrets.TOKEN }}
       with:
         tag_name: v1.0.0
         asset_path: build/app/outputs/apk/debug
