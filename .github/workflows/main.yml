@@ -33,7 +33,7 @@ jobs:
       #     cd ..
       #     zip -r app.ipa Payload
       - name: Push to Releases
-            - tag: calsi
+             tag: calsi
 
         
         uses: ncipollo/release-action@v1
