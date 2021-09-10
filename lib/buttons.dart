@@ -51,36 +51,5 @@ class MyButton extends StatelessWidget {
         ),
       ),
     );
-    // return Container(
-    //   color: color,
-    //   child: Theme(
-    //     data: ThemeData(),
-    //     child: InkWell(
-    //       highlightColor: isdark
-    //           ? Colors.white.withOpacity(1)
-    //           : Colors.black.withOpacity(1),
-    //       splashColor: isdark
-    //           ? Colors.white.withOpacity(1)
-    //           : Colors.black.withOpacity(1),
-    //       borderRadius: BorderRadius.circular(40),
-    //       onTap: buttonTapped,
-    //       child: Padding(
-    //         padding: const EdgeInsets.all(8.0),
-    //         child: ClipRRect(
-    //           borderRadius: BorderRadius.circular(25),
-    //           child: Container(
-    //             // color: color,
-    //             child: Center(
-    //               child: Text(
-    //                 buttonText,
-    //                 style: TextStyle(color: textColor, fontSize: 17),
-    //               ),
-    //             ),
-    //           ),
-    //         ),
-    //       ),
-    //     ),
-    //   ),
-    // );
   }
 }
