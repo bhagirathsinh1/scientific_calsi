@@ -34,5 +34,5 @@ jobs:
         uses: ncipollo/release-action@v1.5.0
         with:
           artifacts: "build/app/outputs/apk/debug/*"
-       tag: calculator.v1.0.${{ github.run_number }}
+          tag: calculator.v1.0.${{ github.run_number }}
           token: ${{ secrets.TOKEN }}
