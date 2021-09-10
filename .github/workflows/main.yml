@@ -1,37 +1,42 @@
 on:
+  pull_request:
+    branches:
+      - main
+      - master
   push:
-    tags:
-      - v*
-
-#The tasks that this workflow needs to perform
+    branches:
+      - main
+      - master
+      - develop
+name: "Build & Release"
 jobs:
-  process:
-    name: all process
-    runs-on: ubuntu-latest
-    #The steps of this task
+  build:
+    name: Build & Release
+    runs-on: windows-latest
     steps:
-      #Pull item code
-      - uses: actions/checkout@v2
-      #Establishing Java environment
-      - name: Setup Java JDK
-        uses: actions/setup-java@v1.3.0
+      - uses: actions/checkout@v1
+      # - uses: actions/setup-java@v1
         with:
-          java-version: "12.x"
-      #Building a flutter environment
-      - name: Flutter action
-        uses: subosito/flutter-action@v1.1.1
+          java-version: '12.x'
+      - uses: subosito/flutter-action@v1
         with:
-          channel: "stable"
-          flutter-version: "1.12.x"
-      #Download project dependencies
+          flutter-version: '2.2.0'
       - run: flutter pub get
-      #Perform the test
-      - run: flutter test
-      #Package apk
-      - run: flutter build apk --release
-      #Publish to release
-      - name: Release apk
-        uses: ncipollo/release-action@v1.5.0
+      # - run: flutter test
+      - run: flutter build apk --debug --split-per-abi
+      # - run: |
+      #     flutter build ios --no-codesign
+      #     cd build/ios/iphoneos
+      #     mkdir Payload
+      #     cd Payload
+      #     ln -s ../Runner.app
+      #     cd ..
+      #     zip -r app.ipa Payload
+      - name: Push to Releases
+             
+
+        
+        uses: ncipollo/release-action@v1
         with:
           artifacts: "build/app/outputs/apk/debug/*"
           tag: calculator.v1.0.${{ github.run_number }}
