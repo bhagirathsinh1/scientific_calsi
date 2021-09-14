@@ -372,7 +372,7 @@ class _HomePageState extends State<HomePage> {
                                     }
                                   } else if (userQuestion[
                                               userQuestion.length - 1] ==
-                                          '0' &&
+                                          "0" &&
                                       userQuestion[userQuestion.length - 2] ==
                                           '/') {
                                   } else if (userQuestion[
