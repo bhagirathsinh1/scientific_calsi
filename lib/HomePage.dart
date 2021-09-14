@@ -364,8 +364,8 @@ class _HomePageState extends State<HomePage> {
                                         userQuestion + 'x' + buttons[index];
                                   });
                                 } else {
-                                  if (userQuestion == "0") {
-                                    if (buttons[index] == "0") {
+                                  if (userQuestion == '0') {
+                                    if (buttons[index] == '0') {
                                       setState(() {
                                         userQuestion = userQuestion;
                                       });

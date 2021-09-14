@@ -12,7 +12,7 @@ class nextPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: bgColor,
       appBar: AppBar(
-        title: Text("History"),
+        title: Text('History'),
       ),
       body: Container(
         child: ListView.builder(
