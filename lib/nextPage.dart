@@ -2,7 +2,9 @@ import 'package:calsi/HomePage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+// ignore: non_constant_identifier_names
 List<String> history_list = [];
+// ignore: non_constant_identifier_names
 List<String> history_list_2 = [];
 
 // ignore: camel_case_types
