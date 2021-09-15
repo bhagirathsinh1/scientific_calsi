@@ -18,7 +18,7 @@ jobs:
       - run: flutter format --set-exit-if-changed .
       # - run: flutter analyze .
       # - run: flutter test
-      - run: flutter build apk
+      - run: flutter build apk --debug --split-per-abi
      uses: ncipollo/release-action@v1
         with:
           artifacts: "build/app/outputs/apk/debug/*"
