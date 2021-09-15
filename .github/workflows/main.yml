@@ -11,6 +11,9 @@ on:
 name: "Build & Release"
 jobs:
   build:
+
+    name: flutter clean
+    - run: flutter clean
     name: Build & Release
     runs-on: windows-latest
     steps:
