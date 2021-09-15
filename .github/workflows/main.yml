@@ -21,7 +21,7 @@ jobs:
           # java-version: '12.x'
 
       - run: flutter pub get
-      - run: flutter clean
+      # - run: flutter clean
       # - run: flutter test
       - run: flutter build apk --debug --split-per-abi
       # - run: |
