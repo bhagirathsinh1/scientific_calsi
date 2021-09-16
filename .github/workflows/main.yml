@@ -24,11 +24,11 @@ jobs:
         with:
           flutter-version: "2.2.0"
 
-      - name: Decoding android/key.properties
-        run: echo "${{ secrets.KEYPROP_PROD }}" | base64 --decode > android/key.properties
+      # - name: Decoding android/key.properties
+      #   run: echo "${{ secrets.KEYPROP_PROD }}" | base64 --decode > android/key.properties
 
-      - name: Decoding android/neumodore_key.jks
-        run: echo "${{ secrets.KEYJKS_PROD }}" | base64 --decode > android/key.jks
+      # - name: Decoding android/neumodore_key.jks
+      #   run: echo "${{ secrets.KEYJKS_PROD }}" | base64 --decode > android/key.jks
 
       - name: Pub Get Packages
         run: flutter pub get
