@@ -11,6 +11,7 @@ on:
 name: "Build & Release"
 jobs:
   build:
+  
     name: Build & Release
     runs-on: windows-latest
     steps:
@@ -22,6 +23,7 @@ jobs:
         with:
           flutter-version: '2.2.0'
       - run: flutter pub get
+      - run: flutter clean
       # - run: flutter test
       - run: flutter build apk --debug --split-per-abi
       # - run: |
