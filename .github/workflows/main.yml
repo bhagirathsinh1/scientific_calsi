@@ -1,7 +1,14 @@
 on:
+  pull_request:
+    branches:
+      - main
+      - master
   push:
-    tags:
-      - "v*.*.*" # on every version tag will build a new android artifact.
+    branches:
+      - main
+      - master
+      - develop
+name: "Build & Release" # on every version tag will build a new android artifact.
 jobs:
   build:
     name: Build APK
