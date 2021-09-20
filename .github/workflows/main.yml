@@ -38,4 +38,6 @@ jobs:
         with:
           artifacts: "build/app/outputs/apk/debug/*"
           tag: calculator.v1.0.${{ github.run_number }}
-          token: ${{ secrets.TOKEN }}
+          # token: ${{ secrets.TOKEN }}
+          token: ${{ secrets.MY_TOKEN }}
+
