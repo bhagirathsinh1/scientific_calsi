@@ -27,6 +27,23 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "firebase/app";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+  
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyAWsTTd2drM5q-w8lt421Ow_Ov6SPfJgEU",
+    authDomain: "calculator-eec6e.firebaseapp.com",
+    projectId: "calculator-eec6e",
+    storageBucket: "calculator-eec6e.appspot.com",
+    messagingSenderId: "94977120966",
+    appId: "1:94977120966:web:e8208d1dd05c16449a95c7"
+  };
+  
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
