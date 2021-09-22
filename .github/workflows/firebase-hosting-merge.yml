@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-java@v1
         with:
-          java version: '12x'
+          java-version: '12.x'
       - uses: subosito/flutter-action@v1
       - name: 'Run flutter pub get'
         run: flutter pub get
