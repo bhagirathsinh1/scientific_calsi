@@ -36,8 +36,7 @@ jobs:
                    
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "build/app/outputs/flutter-apk/*"
-          # E:\Flutter projects\calsi\build\app\outputs\flutter-apk\app-release.apk
+          artifacts: "build/app/outputs/apk/debug/*"
           tag: calculator.v1.0.${{ github.run_number }}
           token: ${{ secrets.TOKEN }}
         #  token: ${{ secrets.MY_TOKEN }}
