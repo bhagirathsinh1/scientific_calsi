@@ -39,6 +39,6 @@ jobs:
         with:
           artifacts: "build/app/outputs/apk/debug/*"
           tag: calculator.v1.0.${{ github.run_number }}
-          token: ${{ secrets.TOKEN }}
+          token: ${{ secrets.CALSI_PVT }}
         #  token: ${{ secrets.MY_TOKEN }}
 
